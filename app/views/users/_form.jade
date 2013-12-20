@@ -1,0 +1,18 @@
+fieldset
+  legend Personal Particular
+  .contactForm_tr
+    .contactForm_td1 Name
+    .contactForm_tdMiddle : 
+    .contactForm_td2
+      != form.input("name", {class: "Personal-input", maxlength: "30"})
+
+  .contactForm_tr
+    .contactForm_td1 Email
+    .contactForm_tdMiddle : 
+    .contactForm_td2
+      != form.input("email", {class: "Personal-input", maxlength: "30"})
+
+fieldset
+  legend What do you about this Page :
+  .massage-box
+    != form.input("des", {class: "Personal-input", maxlength: "30", placeholder: 'Enter your instruction here...'})

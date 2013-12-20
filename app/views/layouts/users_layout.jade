@@ -1,0 +1,20 @@
+!!! 5
+html
+  head
+    title= title
+    != stylesheetLinkTag('application')
+    != javascriptIncludeTag('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'rails', 'application')
+    != csrfMetaTag()
+  body
+    .App42PaaS_header_wrapper
+      .App42PaaS_header_inner
+        .App42PaaS_header
+          .logo
+            a(href='/')
+              img(border='0', alt='App42PaaS', src='/images/logo.png')
+    .App42PaaS_body_wrapper
+      .App42PaaS_body
+        .App42PaaS_body_inner
+          != body
+
+  != contentFor('javascripts')

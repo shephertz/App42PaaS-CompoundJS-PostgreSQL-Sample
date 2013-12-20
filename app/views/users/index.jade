@@ -1,0 +1,36 @@
+.page-header
+  h1 Show All users
+
+- if (users.length) {
+.row
+  .span12
+     table.table.table-striped
+       thead
+         tr
+           th Name
+           th Email
+           th Description
+           th.span3 Actions
+       tbody
+         - users.forEach(function (user) {
+         tr
+           td
+             != user.name
+           td
+             != user.email
+           td
+             != user.des
+           td
+             != linkTo('<i class="icon-remove icon-white"></i> Delete', pathTo.user(user), {class: 'btn btn-mini btn-danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'})
+         - });
+- } else{
+.row
+  .span12
+     p.alert.alert-block.alert-info
+        strong No users were found.
+- }
+
+.row
+  .span12
+     p
+        != linkTo('<i class="icon-plus icon-white"></i> New user', path_to.new_user(), {class: 'btn btn-primary'})

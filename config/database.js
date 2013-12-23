@@ -9,10 +9,10 @@ module.exports = {
     },
     production: {
         driver: 'postgres',
-        host: 'localhost',
-        port: 5432,
-        username: 'root',
-        password: '',
-        database: 'CompoundJS_production'
+        host: 'VM IP',
+        port: VM PORT,
+        username: 'USER NAME',
+        password: 'PASSWORD',
+        database: 'DATABASE NAME'
     }
 };
